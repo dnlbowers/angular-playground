@@ -10,8 +10,16 @@ export class DogsService {
   BreedsUrl = 'https://dog.ceo/api/breeds/list/all'
   breedList: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  
-  
+  getBreeds() {
+    return this.http.get(this.BreedsUrl)
+      .pipe(
+        map((breed: any) => breed.message),
+        tap(breed => this.breedList = breed,)
+      )
+  }
 }
+
+
+

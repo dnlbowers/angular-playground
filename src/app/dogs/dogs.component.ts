@@ -9,12 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class DogsComponent implements OnInit{
 
-    breedList: any;
+    breedList$: any;
+    breedImageUrl$: any;
 
     constructor(private dogs:DogsService) { }
 
     ngOnInit() {
+      this.breedList$ = this.dogs.getBreeds()
+        .subscribe(breed =>
+          this.breedList$ = breed,
+        );
       
     }
-    
+
 }

@@ -1,8 +1,4 @@
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
-<p>dogs works!</p>
+<div *ngFor="let breed of breedList$ | keyvalue ;">
+    {{breed.key}}: {{breed.value}}
+</div>
+
