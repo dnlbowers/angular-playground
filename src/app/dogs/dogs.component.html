@@ -1,5 +1,9 @@
-<div *ngFor="let breed of breeds;">
-    {{breed}}
+<mat-card class="mat-mdc-elevation-specific mat-elevation-z8" *ngFor="let breed of breeds;">
+    <mat-card-content>
+        {{breed}}
+    </mat-card-content>    <!-- Do not uncomment the line below, it will break the app -->
    <!-- <img [src]="getBreedImage(breed)" alt="">  -->
-</div>
+</mat-card>
 <!-- {{ breeds}} -->
+
+<!-- <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg" alt=""> -->

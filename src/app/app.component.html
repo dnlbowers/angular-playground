@@ -1,8 +1,8 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
     <mat-nav-list (click)="sidenav.close()">
-      <a mat-list-item >Home</a>
-      <a mat-list-item>About</a>
+      <a mat-list-item routerLink="/" >Home</a>
+      <a mat-list-item routerLink="/tables">Tables</a>
       <a mat-list-item>Contact</a>
     </mat-nav-list>
   </mat-sidenav>

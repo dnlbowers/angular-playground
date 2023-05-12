@@ -20,7 +20,7 @@ export class DogsService {
   }
 
   createImageUrl(breed: string) {
-    return this.http.get(`https://dog.ceo/api/breed/${breed}/images/random`)
+    return this.http.get(`https://dog.ceo/api/breed/${breed}/images`)
       
   }
 }

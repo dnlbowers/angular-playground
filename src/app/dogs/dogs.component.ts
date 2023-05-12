@@ -12,19 +12,21 @@ export class DogsComponent implements OnInit{
     breedList$: any;
     breeds: Array<any> = [];
     breedImageUrl$: any;
+    images: Array<any> = [];
     
 
     constructor(private dogs:DogsService) { }
 
     ngOnInit() {
       this.breedList$ = this.dogs.getBreeds()
-      // console.log(this.breedList$)
+      console.log(this.breedList$)
+      console.log(this.breeds)
       
       this.breedList$
         .subscribe(
           (breeds: any) => this.breeds = breeds,
           noop,
-          () => console.log(this.breeds)
+          () => console.log("breeds " + this.breeds)
         )
 
     
@@ -33,11 +35,7 @@ export class DogsComponent implements OnInit{
     getBreedImage(breed: any) {
       const url =this.dogs.createImageUrl(breed)
       // subscribe to the observable and retrive the image from the api call made in the service
-      url.subscribe(
-        (data: any) => this.breedImageUrl$ = data.message,
-        noop,
-        () => console.log(this.breedImageUrl$)
-      )
+      
       
     }
 
