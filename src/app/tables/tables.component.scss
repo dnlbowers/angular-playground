@@ -1,0 +1,49 @@
+.container {
+    border: 2px solid #000;
+    margin: 20px auto;
+    width: 50%;
+}
+
+table {
+    width: 100%;
+}
+
+mat-paginator {
+    border-top: 2px solid #000;
+}
+
+.mat-column-position {
+    border-right: 1px solid #000;
+    width: 20px;
+
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.mat-mdc-row.mdc-data-table__row.cdk-row.ng-star-inserted.highlighted-row {
+    background-color: red;
+
+}
+
+ul > li > mat-icon{
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.center-btn {
+    text-align: center;
+    margin: 5px auto;
+    .caps{
+        text-transform: uppercase;
+    }
+}
+
+
+

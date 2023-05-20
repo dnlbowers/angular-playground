@@ -30,11 +30,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css']
+  styleUrls: ['./tables.component.scss']
 })
 export class TablesComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  clickedRows = new Set<PeriodicElement>();
   
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
