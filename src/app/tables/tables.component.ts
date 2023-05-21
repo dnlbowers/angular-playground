@@ -55,4 +55,10 @@ export class TablesComponent implements AfterViewInit {
   selectRow(row: PeriodicElement){
     this.clickedRows.has(row)? this.clickedRows.delete(row): this.clickedRows.add(row)
   }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  
+  }
 }

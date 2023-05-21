@@ -16,7 +16,7 @@
         <mat-header-cell *matHeaderCellDef> 
           <mat-form-field appearance="outline">
             <mat-label>Element Name</mat-label>
-            <input  [formControl]="nameFilter" placeholder="Search..." matInput>
+            <input  [formControl]="nameFilter" (keyup)="applyFilter($event)" placeholder="Search..." matInput>
           </mat-form-field> </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
       </ng-container>
