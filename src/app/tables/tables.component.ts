@@ -3,6 +3,7 @@ import { PeriodicElement } from '../_models/periodic-element';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { FormControl, FormGroup } from '@angular/forms';
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -36,6 +37,10 @@ export class TablesComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   clickedRows = new Set<PeriodicElement>();
+  positionFilter = new FormControl('');
+  nameFilter = new FormControl('');
+  weightFiler = new FormControl('');
+  symbol = new FormControl('');
   
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -45,5 +50,9 @@ export class TablesComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+  }
+
+  selectRow(row: PeriodicElement){
+    this.clickedRows.has(row)? this.clickedRows.delete(row): this.clickedRows.add(row)
   }
 }

@@ -7,6 +7,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,6 +28,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatPaginatorModule,
     MatFormFieldModule,
     MatSortModule,
+    MatInputModule,
   ],
   exports: [
     MatToolbarModule,
@@ -38,7 +40,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatSortModule
+    MatSortModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

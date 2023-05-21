@@ -7,6 +7,7 @@ import { MaterialModule } from './_modules/material/material.module';
 import { DogsComponent } from './dogs/dogs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TablesComponent } from './tables/tables.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TablesComponent } from './tables/tables.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],

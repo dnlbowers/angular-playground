@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-table {
+mat-table {
     width: 100%;
 }
 
@@ -15,8 +15,7 @@ mat-paginator {
 
 .mat-column-position {
     border-right: 1px solid #000;
-    width: 20px;
-
+    flex: 0.25;
 }
 
 .mat-mdc-row:hover .mat-mdc-cell,
@@ -58,6 +57,13 @@ ul > li > mat-icon{
     position: relative;
 }
 
+mat-header-cell, mat-cell {
+    padding: 10px;
+    text-align: center;
+}
 
-
-
+mat-form-field {
+    margin-top: 15px;
+    margin: 15 auto;
+    width: 70%;
+}
