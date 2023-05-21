@@ -2,6 +2,7 @@
     border: 2px solid #000;
     margin: 20px auto;
     width: 50%;
+    text-align: center;
 }
 
 table {
@@ -18,23 +19,28 @@ mat-paginator {
 
 }
 
-.mat-mdc-row:hover .mat-mdc-cell {
+.mat-mdc-row:hover .mat-mdc-cell,
+.mat-mdc-row.highlighted-row .mat-mdc-cell {
     cursor: pointer;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    font-weight: 700;
 }
 
 .mat-mdc-row.mdc-data-table__row.cdk-row.ng-star-inserted.highlighted-row {
-    background-color: red;
+    background-color: #ff415a;
 
 }
 
 ul > li > mat-icon{
+
     font-size: small;
-    text-align: center;
+    text-align: end;
     vertical-align: middle;
     line-height: 23px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .center-btn {
@@ -44,6 +50,14 @@ ul > li > mat-icon{
         text-transform: uppercase;
     }
 }
+
+.selected-elements {
+    margin: 15px auto;
+    width: 33%;
+    text-align: start;
+    position: relative;
+}
+
 
 
 

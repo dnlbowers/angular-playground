@@ -34,7 +34,7 @@
         *matRowDef="let row; columns: displayedColumns;"></tr>
       
     </table>
-    <mat-paginator [pageSizeOptions]="[3, 5, 10]"
+    <mat-paginator [pageSizeOptions]="[3, 5, 10, 20]"
         [pageSize]="5"
         showFirstLastButtons
         aria-label="Select page of periodic elements">
@@ -47,10 +47,11 @@
 </div>
 
 <div *ngIf="clickedRows.size" class="container mat-elevation-z8">
-  <ul>
+  <h2>Selected Elements</h2>
+  <ul class="selected-elements">
     <li *ngFor="let clickedRow of clickedRows">
       {{clickedRow.position}} - {{clickedRow.name}} | {{clickedRow.weight}} | {{clickedRow.symbol}}
-      <mat-icon (click)="clickedRows.delete(clickedRow)">cancel</mat-icon>
+      <mat-icon color="warn" (click)="clickedRows.delete(clickedRow)">cancel</mat-icon>
     </li>
   </ul>
   <div class="center-btn">
