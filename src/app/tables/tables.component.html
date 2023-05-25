@@ -13,11 +13,13 @@
     
       <!-- Name Column -->
       <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> 
+        <mat-header-cell *matHeaderCellDef > 
           <mat-form-field appearance="outline">
             <mat-label>Element Name</mat-label>
             <input  [formControl]="nameFilter" (keyup)="applyFilter($event)" placeholder="Search..." matInput>
-          </mat-form-field> </mat-header-cell>
+            <span matSuffix mat-sort-header></span>
+          </mat-form-field> 
+        </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
       </ng-container>
     

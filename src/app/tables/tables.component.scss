@@ -67,3 +67,7 @@ mat-form-field {
     margin: 15 auto;
     width: 70%;
 }
+
+::ng-deep div.mat-sort-header-container .mat-sort-header-arrow {
+    margin: 0 12px 0 6px;
+}
